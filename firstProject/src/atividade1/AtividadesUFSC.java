@@ -1,3 +1,4 @@
+package atividade1;
 import java.util.Arrays;
 
 public class AtividadesUFSC {
@@ -5,7 +6,7 @@ public class AtividadesUFSC {
     public static void main(String[] args) {
         int[] vector = new int[6];
         System.out.println("Vetor A:\n" + Arrays.toString(vector));
-        
+
         int lines = 6;
         int columns = 6;
         int[][] matrix = new int[lines][columns];
@@ -22,7 +23,7 @@ public class AtividadesUFSC {
             System.out.println();
         }
         System.out.println("\nSOMA: " + sum);
-        
+
         float avg = sum / (lines * columns);
         System.out.println("MÉDIA: " + avg);
 
@@ -36,8 +37,8 @@ public class AtividadesUFSC {
                 }
             }
         }
-        float percentSum = sumGreaterAvg/sum;
-        float percentAmount = amountGreaterAvg/(lines*columns);
+        float percentSum = sumGreaterAvg / sum;
+        float percentAmount = amountGreaterAvg / (lines * columns);
         System.out.println("SOMA VALORES ACIMA DA MÉDIA: " + sumGreaterAvg + " (" + percentSum + "%)");
         System.out.println("QTD VALORES ACIMA DA MÉDIA: " + amountGreaterAvg + " (" + percentAmount + "%)");
 
