@@ -1,10 +1,6 @@
-package atividade2;
-public class Atividade2 {
-    
+package exercises;
+public class Exercise3 {
     public static void main(String[] args) {
         
-        
-
     }
-
 }

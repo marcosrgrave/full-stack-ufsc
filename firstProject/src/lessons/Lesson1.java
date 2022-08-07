@@ -1,6 +1,7 @@
+package lessons;
 import java.util.Arrays;
 
-public class App {
+public class Lesson1 {
     public static void main(String[] args) throws Exception {
         // this is a single line comment
         
