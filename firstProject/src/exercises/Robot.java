@@ -6,6 +6,13 @@ public class Robot {
     private float coordX;
     private float coordY;
 
+    public Robot(float coordX, float coordY) {
+        this.id = GenerateID.uniqueID();
+        this.coordX = coordX;
+        this.coordY = coordY;
+        System.out.println("Robot initialized...");
+    }
+
     public String getId() {
         return this.id;
     }
@@ -28,13 +35,6 @@ public class Robot {
 
     public void setCoordY(float coordY) {
         this.coordY = coordY;
-    }
-
-    public Robot(float coordX, float coordY) {
-        this.id = GenerateID.uniqueID();
-        this.coordX = coordX;
-        this.coordY = coordY;
-        System.out.println("Robot initialized...");
     }
 
 }
