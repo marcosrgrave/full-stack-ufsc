@@ -1,8 +1,5 @@
 package exercises;
 
-import java.util.UUID;
-import java.util.concurrent.ThreadLocalRandom;
-
 public class Robot {
 
     private String id;
@@ -34,21 +31,10 @@ public class Robot {
     }
 
     public Robot(float coordX, float coordY) {
-        this.id = uniqueID();
+        this.id = GenerateID.uniqueID();
         this.coordX = coordX;
         this.coordY = coordY;
         System.out.println("Robot initialized...");
-    }
-
-    public static String uniqueID() {
-        int randomInteger = ThreadLocalRandom.current().nextInt(0, 429496729 + 1);
-        String id = Integer.toHexString(randomInteger);
-        return id;
-    }
-
-    public static String uniqueUUID() {
-        UUID uuid = UUID.randomUUID();
-        return uuid.toString();
     }
 
 }
