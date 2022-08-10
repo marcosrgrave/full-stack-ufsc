@@ -4,6 +4,7 @@ public class Student {
 
     private String registration;
     private String name;
+    private Date birthDate;
     private float exam1;
     private float exam2;
     private float exam3;
@@ -11,6 +12,7 @@ public class Student {
     public Student() {
         this.registration = "0000000";
         this.name = "Name not defined";
+        this.birthDate = new Date("01/01/2001");
         this.exam1 = 0;
         this.exam2 = 0;
         this.exam3 = 0;
@@ -51,6 +53,14 @@ public class Student {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Date getBirthDate() {
+        return this.birthDate;
+    }
+
+    public void setBirthDate(String date) {
+        this.birthDate = new Date(date);
     }
 
     public float getExam1() {
