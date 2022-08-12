@@ -22,7 +22,7 @@ public class Lesson1 {
             System.out.println(i);
         }
 
-        int vector[] = new int[3];
+        int[] vector = new int[3];
         System.out.println(Arrays.toString(vector));
 
     }
