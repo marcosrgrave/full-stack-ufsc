@@ -74,15 +74,4 @@ public class Date {
         return -1;
     }
 
-    /*
-     * 5. (Teórica) No contexto de orientação a objetos, qual é a finalidade
-     * da existência de construtores/destrutores definidos nas classes?
-     * Exemplifique como funcionam.
-     * 
-     * R: 
-     * 
-     * 6. (Teórica) Represente, usando UML, as classes 
-     * Aluno e Data definidas nos exercícios 1 e 4.
-     */
-
 }
