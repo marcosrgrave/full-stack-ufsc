@@ -29,4 +29,18 @@ public class Exercise3 {
         return;
     }
 
+    /*
+     * 5. (Teórica) No contexto de orientação a objetos, qual é a finalidade
+     * da existência de construtores/destrutores definidos nas classes?
+     * Exemplifique como funcionam.
+     * 
+     * R: O construtor é uma porção de código executado quando um novo objeto é instanciado.
+     * O destrutor é uma porção de código executado quando um novo objeto é finalizado.
+     * A principal utilidade de um construtor é permitir a inicialização e validação de dados 
+     * no ato de inicialização dos objetos.
+     * 
+     * 6. (Teórica) Represente, usando UML, as classes
+     * Aluno e Data definidas nos exercícios 1 e 4.
+     */
+
 }
