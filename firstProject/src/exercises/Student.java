@@ -1,5 +1,8 @@
 package exercises;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Student {
 
     private String registration;
@@ -94,6 +97,26 @@ public class Student {
         float sumWeight = 2.5f + 2.5f + 5.0f;
         float average = sumProduct / sumWeight;
         return average;
+    }
+
+    public String toString() {
+        return "Registration: " + this.registration + "\n" +
+                "Name: " + this.name + "\n" +
+                "Birth Date: " + this.birthDate + "\n" +
+                "Exam1: " + this.exam1 + "\n" +
+                "Exam2: " + this.exam2 + "\n" +
+                "Exam3: " + this.exam3;
+    }
+
+    public Map<String, Object> toJson() {
+        Map<String, Object> json = new HashMap<>();
+        json.put("registration", this.registration);
+        json.put("name", this.name);
+        json.put("birthDate", this.birthDate);
+        json.put("exam1", this.exam1);
+        json.put("exam2", this.exam2);
+        json.put("exam3", this.exam3);
+        return json;
     }
 
 }
