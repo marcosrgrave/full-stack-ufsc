@@ -8,4 +8,9 @@ interface IMathOperation {
      * because all interface methods are public and abstract.
      */
 
+    /*
+     * Q3 Answer: The improvement comes from removing the classes repeated attributes
+     * and adding to the common method as parameters.
+     */
+
 }
