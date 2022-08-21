@@ -16,6 +16,7 @@ public class GenerateID {
     }
 
     public static String uniqueID() {
+        /** Based on AppSheet's UNIQUEID() function. */
         int randInt = randomInteger(0, 429496729);
         String id = Integer.toHexString(randInt);
         return id;
