@@ -4,6 +4,14 @@ public class CourseShort extends Course {
 
     private String registrationMonth;
 
+    public String getRegistrationMonth() {
+        return this.registrationMonth;
+    }
+
+    public void setRegistrationMonth(String registrationMonth) {
+        this.registrationMonth = registrationMonth;
+    }
+
     public float averageScore() {
         return (this.score1 + this.score2) / 2;
     }
