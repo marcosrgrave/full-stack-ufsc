@@ -1,0 +1,24 @@
+3. Considerando o diagrama da questão 2, indique as alternativas verdadeiras:
+
+a) Existem 3 ocorrências de herança no diagrama;
+
+b) A classe Pessoa é uma especialização da classe Funcionário;
+
+c) O método calculaImposto() adicionado na classe Funcionário é um exemplo de polimorfismo de sobrecarga e o mesmo método na classe Gerente é um exemplo de polimorfismo de rescrita;
+
+d) O código abaixo está correto:
+    Funcionario f = new Gerente();
+
+e) O código abaixo está correto:
+    Gerente g = new Funcionario();
+    
+f) No código abaixo, o código executado no método imprimeDados() será o definido na classe Gerente:
+    Pessoa p = new Gerente();
+    p.imprimeDados();
+
+g) No código abaixo, o código executado no método imprimeDados() será o definido na classe Gerente:
+    Funcionario f = new Gerente();
+    f.imprimeDados();
+    
+h) O código abaixo está correto:
+    Pessoa p = new Gerente();
