@@ -1,2 +1,0 @@
-Q3 Answer:
-The improvement comes from removing the classes repeated attributes and adding them to the common method as parameters.

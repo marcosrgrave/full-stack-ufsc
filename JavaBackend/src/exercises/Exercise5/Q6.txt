@@ -1,5 +1,0 @@
-6. Por que o método calculaValorTarifaManutencao() está representado em todas as classes do diagrama?
-Qual o nome dado em POO para isto?
-
-R: O método foi repetido, pois, o cálculo é diferente para cada classe (ContaPoupanca e ContraInvestimento), sendo necessário ajustes que satisfaçam suas peculiaridades.
-Este processo é conhecido como "Sobrescrita" ou Override em POO.
