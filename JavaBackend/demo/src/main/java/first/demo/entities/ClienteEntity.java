@@ -1,4 +1,4 @@
-package first.demo.models;
+package first.demo.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -19,7 +19,6 @@ public class ClienteEntity {
     private String telefone;
 
     public ClienteEntity() {
-
     }
 
     public ClienteEntity(String nome) {
