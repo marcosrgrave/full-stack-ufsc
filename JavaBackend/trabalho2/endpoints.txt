@@ -1,0 +1,7 @@
+descrever todos os endpoints criados e os parâmetros necessários para o teste.
+
+/assunto/get_all
+/assunto/{id}
+/assunto/add
+/assunto/update
+/assunto/delete
