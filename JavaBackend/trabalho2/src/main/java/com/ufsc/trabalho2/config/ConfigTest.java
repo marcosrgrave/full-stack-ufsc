@@ -35,6 +35,7 @@ public class ConfigTest implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        Date dateExample = new Date(122, 9, 26);
 
         AssuntoEntity assunto1 = new AssuntoEntity("Descrição 1");
         AssuntoEntity assunto2 = new AssuntoEntity("Descrição 2");
@@ -58,7 +59,6 @@ public class ConfigTest implements CommandLineRunner {
 
         postagemRepository.saveAll(Arrays.asList(postagem1, postagem2, postagem3));
 
-        Date dateExample = new Date(122, 9, 26);
         ComentarioEntity comentario1 = new ComentarioEntity("Comentario 1", dateExample, "Text 1");
         ComentarioEntity comentario2 = new ComentarioEntity("Comentario 2", dateExample, "Text 2");
         ComentarioEntity comentario3 = new ComentarioEntity("Comentario 3", dateExample, "Text 3");
@@ -69,6 +69,13 @@ public class ConfigTest implements CommandLineRunner {
 
         comentarioRepository.saveAll(Arrays.asList(comentario1, comentario2, comentario3));
 
+        postagem1.getAssuntos().add(assunto1);
+        postagem1.getAssuntos().add(assunto2);
+        postagem1.getAssuntos().add(assunto3);
+        postagem2.getAssuntos().add(assunto1);
+        postagem3.getAssuntos().add(assunto1);
+
+        postagemRepository.saveAll(Arrays.asList(postagem1, postagem2, postagem3));
     }
 
 }

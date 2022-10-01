@@ -12,47 +12,47 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ufsc.trabalho2.entities.AssuntoEntity;
-import com.ufsc.trabalho2.services.AssuntoService;
+import com.ufsc.trabalho2.entities.ComentarioEntity;
+import com.ufsc.trabalho2.services.ComentarioService;
 
 @RestController
-@RequestMapping("/assunto")
-public class AssuntoController {
+@RequestMapping("/comentario")
+public class ComentarioController {
 
     @Autowired
-    private AssuntoService assuntoService = new AssuntoService();
+    private ComentarioService comentarioService = new ComentarioService();
 
     @GetMapping("/get_all")
-    public Iterable<AssuntoEntity> getAll() {
-        return assuntoService.getAll();
+    public Iterable<ComentarioEntity> getAll() {
+        return comentarioService.getAll();
     }
 
     @GetMapping("/{id}")
-    public AssuntoEntity getById(@PathVariable("id") Long id) {
-        AssuntoEntity assuntoFound = assuntoService.findById(id);
-        return assuntoFound;
+    public ComentarioEntity getById(@PathVariable("id") Long id) {
+        ComentarioEntity comentarioFound = comentarioService.findById(id);
+        return comentarioFound;
     }
 
     @PostMapping("/add")
-    public void add(@RequestBody AssuntoEntity assunto) {
-        assuntoService.addAssunto(assunto);
+    public void add(@RequestBody ComentarioEntity comentario) {
+        comentarioService.addComentario(comentario);
     }
 
-    @PostMapping("/addPostagem")
+    @PostMapping("/setPostagem")
     public void add(@RequestBody Map<String, Long> payload) {
-        Long idAssunto = payload.get("idAssunto");
+        Long idComentario = payload.get("idComentario");
         Long idPostagem = payload.get("idPostagem");
-        assuntoService.addPostagem(idAssunto, idPostagem);
+        comentarioService.setPostagem(idComentario, idPostagem);
     }
 
     @PutMapping("/update")
-    public void update(@RequestBody AssuntoEntity assunto) {
-        assuntoService.updateAssunto(assunto.getId(), assunto);
+    public void update(@RequestBody ComentarioEntity comentario) {
+        comentarioService.updateComentario(comentario.getId(), comentario);
     }
 
     @DeleteMapping("/delete")
     public void delete(@RequestBody Map<String, Long> idPayload) {
-        assuntoService.deleteAssunto(idPayload.get("id"));
+        comentarioService.deleteComentario(idPayload.get("id"));
     }
 
 }

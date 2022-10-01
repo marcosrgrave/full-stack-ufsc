@@ -1,9 +1,7 @@
 package com.ufsc.trabalho2.entities;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -42,13 +40,6 @@ public class AssuntoEntity {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-
-    public Map<String, String> getDto() {
-        Map<String, String> dto = new HashMap<>();
-        dto.put("id", getId().toString());
-        dto.put("descricao", getDescricao());
-        return dto;
     }
 
 }

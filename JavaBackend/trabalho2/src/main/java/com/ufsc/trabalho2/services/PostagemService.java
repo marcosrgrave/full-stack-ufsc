@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ufsc.trabalho2.entities.ComentarioEntity;
+import com.ufsc.trabalho2.entities.EditorEntity;
 import com.ufsc.trabalho2.entities.PostagemEntity;
 import com.ufsc.trabalho2.repositories.ComentarioRepository;
+import com.ufsc.trabalho2.repositories.EditorRepository;
 import com.ufsc.trabalho2.repositories.PostagemRepository;
 
 @Service
@@ -16,6 +18,12 @@ public class PostagemService {
 
     @Autowired
     private ComentarioRepository comentarioRepository;
+
+    @Autowired
+    private AssuntoService assuntoService;
+
+    @Autowired
+    private EditorRepository editorRepository;
 
     public Iterable<PostagemEntity> getAll() {
         return postagemRepository.findAll();
@@ -30,7 +38,6 @@ public class PostagemService {
     }
 
     public void updatePostagem(Long id, PostagemEntity postagem) {
-        PostagemEntity postagemFound = this.findById(id);
         this.addPostagem(postagem);
     }
 
@@ -38,14 +45,23 @@ public class PostagemService {
         postagemRepository.deleteById(idPostagem);
     }
 
-    public PostagemEntity addComentario(Long idPostagem, Long idComentario) {
+    public void setEditor(Long idPostagem, Long idEditor) {
+        PostagemEntity postagem = postagemRepository.findById(idPostagem).get();
+        EditorEntity editor = editorRepository.findById(idEditor).get();
+
+        postagem.setEditor(editor);
+        postagemRepository.save(postagem);
+    }
+
+    public void addAssunto(Long idPostagem, Long idAssunto) {
+        assuntoService.addPostagem(idAssunto, idPostagem);
+    }
+
+    public void addComentario(Long idPostagem, Long idComentario) {
         PostagemEntity postagem = postagemRepository.findById(idPostagem).get();
         ComentarioEntity comentario = comentarioRepository.findById(idComentario).get();
 
         comentario.setPostagem(postagem);
         comentarioRepository.save(comentario);
-
-        return postagem;
     }
-
 }

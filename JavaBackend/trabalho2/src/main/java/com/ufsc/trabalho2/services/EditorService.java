@@ -30,7 +30,6 @@ public class EditorService {
     }
 
     public void updateEditor(Long id, EditorEntity editor) {
-        EditorEntity editorFound = this.findById(id);
         this.addEditor(editor);
     }
 
@@ -38,14 +37,12 @@ public class EditorService {
         editorRepository.deleteById(idEditor);
     }
 
-    public EditorEntity addPostagem(Long idEditor, Long idPostagem) {
+    public void addPostagem(Long idEditor, Long idPostagem) {
         EditorEntity editor = editorRepository.findById(idEditor).get();
         PostagemEntity postagem = postagemRepository.findById(idPostagem).get();
 
         postagem.setEditor(editor);
         postagemRepository.save(postagem);
-
-        return editor;
     }
 
 }

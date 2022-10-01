@@ -1,12 +1,14 @@
 package com.ufsc.trabalho2.entities;
 
-import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -29,17 +31,17 @@ public class PostagemEntity {
     private String titulo;
     private String text;
 
-    @ManyToMany
-    @JoinTable(name = "postagem_assunto", joinColumns = @JoinColumn(name = "postagem_id"), inverseJoinColumns = @JoinColumn(name = "assunto_id"))
-    private List<AssuntoEntity> assuntos = new ArrayList<>();
-
     @OneToMany(mappedBy = "postagem")
     private List<ComentarioEntity> comentarios = new ArrayList<>();
 
     @JsonIgnore
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "editor_id")
     private EditorEntity editor;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "postagem_assunto", joinColumns = @JoinColumn(name = "postagem_id"), inverseJoinColumns = @JoinColumn(name = "assunto_id"))
+    private Set<AssuntoEntity> assuntos = new HashSet<>();
 
     public PostagemEntity() {
     }
@@ -48,12 +50,52 @@ public class PostagemEntity {
         this.titulo = titulo;
     }
 
-    public static Double getTotalPalavras() {
-        throw new java.lang.UnsupportedOperationException("Not implemented yet.");
+    public Long getId() {
+        return this.id;
+    }
+
+    public Date getData() {
+        return this.data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+
+    public String getTitulo() {
+        return this.titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getText() {
+        return this.text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public List<ComentarioEntity> getComentarios() {
+        return this.comentarios;
+    }
+
+    public EditorEntity getEditor() {
+        return this.editor;
     }
 
     public void setEditor(EditorEntity editor) {
         this.editor = editor;
+    }
+
+    public Set<AssuntoEntity> getAssuntos() {
+        return this.assuntos;
+    }
+
+    public static Double getTotalPalavras() {
+        throw new java.lang.UnsupportedOperationException("Not implemented yet.");
     }
 
 }

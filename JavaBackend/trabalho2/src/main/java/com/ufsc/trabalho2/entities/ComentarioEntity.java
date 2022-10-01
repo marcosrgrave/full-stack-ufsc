@@ -23,13 +23,56 @@ public class ComentarioEntity {
 
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "comentario_id")
+    @JoinColumn(name = "postagem_id")
     private PostagemEntity postagem;
+
+    public ComentarioEntity() {
+    }
+
+    public ComentarioEntity(String nome) {
+        this.nome = nome;
+    }
 
     public ComentarioEntity(String nome, Date data, String text) {
         this.nome = nome;
         this.data = data;
         this.text = text;
+    }
+
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Date getData() {
+        return this.data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+
+    public String getText() {
+        return this.text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public PostagemEntity getPostagem() {
+        return this.postagem;
     }
 
     public void setPostagem(PostagemEntity postagem) {
