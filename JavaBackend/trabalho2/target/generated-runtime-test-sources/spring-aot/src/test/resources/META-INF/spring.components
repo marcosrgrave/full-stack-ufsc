@@ -1,0 +1,12 @@
+#
+#Sat Sep 17 23:49:51 BRT 2022
+com.ufsc.trabalho2.Trabalho2Application=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration
+com.ufsc.trabalho2.repositories.EditorRepository=org.springframework.data.repository.Repository
+com.ufsc.trabalho2.repositories.PostagemRepository=org.springframework.data.repository.Repository
+com.ufsc.trabalho2.entities.EditorEntity=javax.persistence.Entity
+com.ufsc.trabalho2.entities.PostagemEntity=javax.persistence.Entity
+com.ufsc.trabalho2.services.AssuntoService=org.springframework.stereotype.Component
+com.ufsc.trabalho2.repositories.AssuntoRepository=org.springframework.data.repository.Repository
+com.ufsc.trabalho2.entities.ComentarioEntity=javax.persistence.Entity
+com.ufsc.trabalho2.entities.AssuntoEntity=javax.persistence.Entity
+com.ufsc.trabalho2.repositories.ComentarioRepository=org.springframework.data.repository.Repository
