@@ -1,0 +1,20 @@
+body {
+  background-color: black;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+ol {
+  margin-left: 40%;
+  margin-right: 50%;
+}
+
+.li {
+  font-weight: normal;
+}
+
+.li-strong {
+  font-weight: bold;
+  font-style: italic;
+}
