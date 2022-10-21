@@ -1,0 +1,27 @@
+h2 {
+  font-family: Cambria;
+}
+
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: black;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.button {
+  background-color: lightseagreen;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
