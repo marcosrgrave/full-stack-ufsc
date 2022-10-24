@@ -3,7 +3,8 @@ h2 {
 }
 
 p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Arial;
+  font-weight: bold;
 }
 
 body {
@@ -21,9 +22,10 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 15px;
-  margin: 4px 2px;
+  font-size: 20px;
+  margin: 40px 10px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .int-input {

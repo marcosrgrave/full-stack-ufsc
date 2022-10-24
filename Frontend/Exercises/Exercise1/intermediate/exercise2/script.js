@@ -6,12 +6,12 @@ function method(value) {
 }
 
 function updateText(word) {
-  namesList.forEach(name => {
-    item = name.innerHTML
+  namesList.forEach((name) => {
+    item = name.innerHTML;
     if (item.toLowerCase().startsWith(word.toLowerCase()) && word != "") {
       name.classList.add("li-strong");
     } else {
-      name.classList.remove("li-strong")
+      name.classList.remove("li-strong");
     }
   });
 }
