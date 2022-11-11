@@ -29,7 +29,5 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### IDEs ###
+### VS Code ###
 .vscode/
-JavaBackend/demo/src/main/resources/hidden.properties
-JavaBackend/.idea/

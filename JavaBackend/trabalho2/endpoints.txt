@@ -1,0 +1,33 @@
+==== POSTMAN JSON LINK ====
+https://www.getpostman.com/collections/15902627d8fe99b9bebd
+
+==== ENDPOINTS CRIADOS ====
+/assunto/get_all
+/assunto/{id}
+/assunto/add
+/assunto/addPostagem
+/assunto/update
+/assunto/delete
+
+/comentario/get_all
+/comentario/{id}
+/comentario/add
+/comentario/setPostagem
+/comentario/update
+/comentario/delete
+
+/editor/get_all
+/editor/{id}
+/editor/add
+/editor/addPostagem
+/editor/update
+/editor/delete
+
+/postagem/get_all
+/postagem/{id}
+/postagem/add
+/postagem/setEditor
+/postagem/addAssunto
+/postagem/addComentario
+/postagem/update
+/postagem/delete
